@@ -1,5 +1,5 @@
 export class Color {
-	constructor(r: Number, g: Number, b: Number, a: Number){
+	constructor(r: number, g: number, b: number, a: number){
 		this.Red = r;
 		this.Green = g;
 		this.Blue = b;
@@ -10,8 +10,8 @@ export class Color {
 		return `rgba(${this.Red}, ${this.Green}, ${this.Blue}, ${this.Alpha})`;
 	}
 	
-	Red: Number;
-	Green: Number;
-	Blue: Number;
-	Alpha: Number;
+	Red: number;
+	Green: number;
+	Blue: number;
+	Alpha: number;
 }

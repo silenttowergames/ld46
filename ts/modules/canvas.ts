@@ -8,15 +8,6 @@ export class Canvas {
 	
 	Init() : void {
 		this.Resize();
-		
-		this.e().style.backgroundColor = this.Skybox.rgba();
-		
-		this.d().clearRect(
-			0,
-			0,
-			this.e().width,
-			this.e().width
-		);
 	}
 	
 	Resize() : void {
@@ -29,6 +20,19 @@ export class Canvas {
 		
 		this.e().width = this.Resolution.X * this.Zoom;
 		this.e().height = this.Resolution.Y * this.Zoom;
+	}
+	
+	Predraw() : void {
+		this.e().style.backgroundColor = this.Skybox.rgba();
+		
+		this.d().clearRect(
+			0,
+			0,
+			this.e().width,
+			this.e().width
+		);
+		
+		this.d().imageSmoothingEnabled = false;
 	}
 	
 	d() : CanvasRenderingContext2D {
